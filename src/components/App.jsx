@@ -1,47 +1,27 @@
-export const App = () => {
+import User from './User';
+import DataList from './DataList';
+import Friends from './Friends';
+import Transactions from './Transactions';
+import user from '../userCollection';
+import data from '../dataCollection';
+import friendsCollection from '../friendsCollection';
+import transactionsCollection from '../transactionsCollection';
+
+const App = () => {
 	return (
-		<div
-			style={{
-				height: '100vh',
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				fontSize: 40,
-				color: '#010101',
-			}}
-		>
-			React homework template
-		</div>
+		<>
+			<User
+				avatar={user.avatar}
+				username={user.username}
+				tag={user.tag}
+				location={user.location}
+				stats={user.stats}
+			/>
+			<DataList stats={data} />
+			<Friends meta={friendsCollection} />
+			<Transactions charges={ transactionsCollection} />
+		</>
 	);
 };
 
-export const User = () => {
-	return (
-		<div className="profile">
-			<div className="description">
-				<img
-					src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-					alt="User avatar"
-					className="avatar"
-				/>
-				<p className="name">Petra Marica</p>
-				<p className="tag">@pmarica</p>
-				<p className="location">Salvador, Brasil</p>
-			</div>
-			<ul className="stats">
-				<li>
-					<span className="label"> Followers</span>
-					<span className="quantity"> 1000</span>
-				</li>
-				<li>
-					<span className="label"> Views</span>
-					<span className="quantity"> 2000</span>
-				</li>
-				<li>
-					<span className="label"> Likes</span>
-					<span className="quantity"> 3000</span>
-				</li>
-			</ul>
-		</div>
-	);
-};
+export default App;

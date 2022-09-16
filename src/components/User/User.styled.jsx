@@ -2,13 +2,14 @@ import styled from '@emotion/styled';
 
 export const UserProfile = styled.div`
 	margin: 0 auto;
-	width: 210px;
+	width: 180px;
 	border: 1px solid gray;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 `;
 
 export const UserDescription = styled.div`
@@ -55,7 +56,7 @@ export const UserStatsItem = styled.li`
 	border-top: 1px solid gray;
 	border-right: 1px solid gray;
 
-	&:nth-child(3) {
+	&:nth-of-type(3) {
 		border-right: none;
 	}
 `;

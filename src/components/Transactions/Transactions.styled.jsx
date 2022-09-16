@@ -7,6 +7,7 @@ export const TransactionTable = styled.table`
 	border: 1px solid gray;
 	margin: 0 auto;
 	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 `;
 
 export const TransactionHeadRow = styled.th`
@@ -17,13 +18,13 @@ export const TransactionHead = styled.thead`
 	color: aliceblue;
 	padding: 20px;
 
-	th:nth-child(1) {
+	th:nth-of-type(1) {
 		width: 35%;
 	}
-	th:nth-child(2) {
+	th:nth-of-type(2) {
 		width: 35%;
 	}
-	th:nth-child(3) {
+	th:nth-of-type(3) {
 		width: 30%;
 	}
 `;
@@ -32,11 +33,11 @@ export const TransactionCell = styled.td`
 `;
 
 export const TransactionBody = styled.tbody`
-	tr:nth-child(odd) {
+	tr:nth-of-type(odd) {
 		background-color: whitesmoke;
 	}
 
-	tr:nth-child(even) {
+	tr:nth-of-type(even) {
 		background-color: lightslategray;
 	}
 

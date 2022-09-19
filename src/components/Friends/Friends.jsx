@@ -5,6 +5,7 @@ import {
 	FriendAvatar,
 	FriendName,
 } from 'components/Friends/Friends.styled';
+import PropTypes from 'prop-types';
 
 function Friends({ meta }) {
 	// const {avatar, name, isOnline, id} = meta
@@ -22,3 +23,12 @@ function Friends({ meta }) {
 }
 
 export default Friends;
+Friends.propTypes = {
+	meta: PropTypes.arrayOf(
+		PropTypes.shape({
+			avatar: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired,
+			isOnline: PropTypes.bool.isRequired,
+		})
+	).isRequired,
+};

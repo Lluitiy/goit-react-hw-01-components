@@ -18,7 +18,7 @@ const App = () => {
 					location={user.location}
 					stats={user.stats}
 				/>
-				<DataList stats={data} />
+			<DataList title={'Upload stats' } stats={data} />
 				<Friends meta={friendsCollection} />
 				<Transactions charges={transactionsCollection} />
 		</Container>
